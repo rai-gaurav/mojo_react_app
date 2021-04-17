@@ -1,0 +1,22 @@
+% layout 'default';
+% title 'Charts';
+
+% content_for 'head' => begin
+    <link rel="stylesheet" type="text/css" href="css/charts.css">
+% end
+
+<div id="root"></div>
+
+% content_for 'end' => begin
+    %= javascript "https://cdn.amcharts.com/lib/4/core.js"
+    %= javascript "https://cdn.amcharts.com/lib/4/charts.js"
+    %= javascript "https://cdn.amcharts.com/lib/4/themes/animated.js"
+
+    %= javascript "js/multi_line_chart.js"
+
+    %= javascript begin
+        var chartData = <%== $chart_data %>
+        var domContainer = document.getElementById("root");
+        createMultiLineChart(domContainer, chartData);
+    % end
+% end
