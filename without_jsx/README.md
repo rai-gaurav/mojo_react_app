@@ -22,4 +22,4 @@ morbo.bat .\script\mojo_app
 
 ### Multi-line chart output -
 
-![alt text](mojo_react_app/without_jsx/multi_line_chart.PNG?raw=true "Output")
+![alt text](multi_line_chart.PNG?raw=true "Output")
