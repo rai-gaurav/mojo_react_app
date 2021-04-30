@@ -1,0 +1,37 @@
+{
+    "title": "Number of automobiles sold per day by manufacturer",
+    "label": {
+        "domainAxis": "Date",
+        "rangeAxis": "Numbers of automobiles sold"
+    },
+    "data": [
+        {
+            "Date": "2020-04-15",
+            "Honda": 10,
+            "Toyota": 20,
+            "Ford": 6,
+            "Renault": 16
+        },
+        {
+            "Date": "2020-04-16",
+            "Honda": 3,
+            "Toyota": 15,
+            "Ford": 19,
+            "Renault": 10
+        },
+        {
+            "Date": "2020-04-17",
+            "Honda": 5,
+            "Toyota": 8,
+            "Ford": 12,
+            "Renault": 6
+        },
+        {
+            "Date": "2020-04-18",
+            "Honda": 9,
+            "Toyota": 10,
+            "Ford": 4,
+            "Renault": 12
+        }
+    ]
+}

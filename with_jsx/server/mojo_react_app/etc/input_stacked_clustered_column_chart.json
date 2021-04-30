@@ -1,0 +1,36 @@
+{
+    "title": "Revenues by region",
+    "label": {
+        "domainAxis": "Date",
+        "rangeAxis": "Expenditure"
+    },
+    "data": [
+        {
+            "Date": "2020-04-15",
+            "Europe": 2.5,
+            "America": 2.5,
+            "Asia": 2.1,
+            "Australia": 1.2,
+            "Antartica": 0.2,
+            "Africa": 0.1
+        },
+        {
+            "year": "2004",
+            "Europe": 2.6,
+            "America": 2.7,
+            "Asia": 2.2,
+            "Australia": 1.3,
+            "Antartica": 0.3,
+            "Africa": 0.1
+        },
+        {
+            "year": "2005",
+            "Europe": 2.8,
+            "America": 2.9,
+            "Asia": 2.4,
+            "Australia": 1.4,
+            "Antartica": 0.3,
+            "Africa": 0.1
+        }
+    ]
+}
