@@ -1,0 +1,57 @@
+---
+openapi: 3.0.2
+info:
+  version: '1.0'
+  title: Mojo React App API
+  description: This is a sample server for a mojolicious app.
+  contact:
+    name: Gaurav Rai
+    url: https://github.com/rai-gaurav
+servers:
+- url: "/api/v1"
+  description: Version one api
+paths:
+  "/multi-line-chart":
+    get:
+      summary: Get multi line chart data
+      tags:
+      - Chart Data
+      operationId: getMultiLineChartData
+      x-mojo-name: get_multi_line_chart_data
+      x-mojo-to:
+        controller: LineCharts
+        action: get_multi_line_chart
+      responses:
+        '200':
+          description: Multi Line Chart Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  chart_data:
+                    type: object
+                    items:
+                      type: object
+  "/stacked-column-chart":
+    get:
+      summary: Get stacked column chart data
+      tags:
+      - Chart Data
+      operationId: getStackedColumnChartData
+      x-mojo-name: get_stacked_column_chart_data
+      x-mojo-to:
+        controller: ColumnCharts
+        action: get_stacked_column_chart
+      responses:
+        '200':
+          description: Stacked Column Chart Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  chart_data:
+                    type: object
+                    items:
+                      type: object
