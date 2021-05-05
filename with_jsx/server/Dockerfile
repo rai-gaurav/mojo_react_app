@@ -11,12 +11,13 @@ RUN apt-get update && apt-get install -y \
     curl \
     vim \
     less \
-    openssl=1.1.1-1ubuntu2.1~18.04.4 \
+    openssl=1.1.1-1ubuntu2.1~18.04.9 \
     libssl-dev \
     zlib1g-dev \
     apache2 \
     uwsgi=2.0.15-10.2ubuntu2.1 \
-    uwsgi-plugin-psgi=2.0.15-10.2ubuntu2.1
+    uwsgi-plugin-psgi=2.0.15-10.2ubuntu2.1 \
+    libapache2-mod-proxy-uwsgi=2.0.15-10.2ubuntu2.1
 
 # Needed dependencies specific to project
 RUN curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n Mojolicious@9.17
@@ -29,6 +30,7 @@ RUN \
     a2enmod headers && \
     a2enmod proxy && \
     a2enmod proxy_http && \
+    a2enmod proxy_uwsgi && \
     a2enmod rewrite && \
     a2enmod ssl
 
