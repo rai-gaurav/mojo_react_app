@@ -21,8 +21,8 @@ create:
 	docker create --name ${CONTAINER_NAME}_${BUILD_TYPE} -t \
 		-p ${ADDRESS}:$(HTTPS_OUT_PORT):$(HTTPS_IN_PORT) -p ${ADDRESS}:$(HTTP_OUT_PORT):$(HTTP_IN_PORT) --env mode=${BUILD_TYPE} \
 		${DOCKER_TAG}
-	docker cp ${DOCKER_CFG}/my_app/apache-certificate/apache_certificate_${BUILD_TYPE}.crt ${CONTAINER_NAME}_${BUILD_TYPE}:/etc/ssl/certs/server.crt
-	docker cp ${DOCKER_CFG}/my_app/apache-certificate/apache_certificate_${BUILD_TYPE}.key ${CONTAINER_NAME}_${BUILD_TYPE}:/etc/ssl/private/server.key
+	docker cp ${DOCKER_CFG}/mojo_react_app/apache-certificate/apache_certificate_${BUILD_TYPE}.crt ${CONTAINER_NAME}_${BUILD_TYPE}:/etc/ssl/certs/server.crt
+	docker cp ${DOCKER_CFG}/mojo_react_app/apache-certificate/apache_certificate_${BUILD_TYPE}.key ${CONTAINER_NAME}_${BUILD_TYPE}:/etc/ssl/private/server.key
 
 start:
 	# Start a container
