@@ -26,6 +26,7 @@ RUN curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n Mojolici
 RUN curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n IO::Socket::SSL@2.070
 RUN curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n JSON::XS@4.03
 
+# Apache specific configuration
 RUN \
     a2enmod headers && \
     a2enmod proxy && \
