@@ -9,3 +9,5 @@ To run
     * `morbo script/mojo_react_app`         -> This will run it on port 3000
     * In case you want diiferent port, run - `morbo -l http://*:3001 script/mojo_react_app`
     * It will work on Windows as well as Linux
+
+You can look at the [scrrenshots](https://github.com/rai-gaurav/mojo_react_app/tree/main/with_jsx/server/output_screenshot) fro more understanding.
