@@ -6,7 +6,7 @@
     },
     "data": [
         {
-            "Date": "2020-04-15",
+            "Year": "2003",
             "Europe": 2.5,
             "America": 2.5,
             "Asia": 2.1,
@@ -15,7 +15,7 @@
             "Africa": 0.1
         },
         {
-            "year": "2004",
+            "Year": "2004",
             "Europe": 2.6,
             "America": 2.7,
             "Asia": 2.2,
@@ -24,7 +24,7 @@
             "Africa": 0.1
         },
         {
-            "year": "2005",
+            "Year": "2005",
             "Europe": 2.8,
             "America": 2.9,
             "Asia": 2.4,

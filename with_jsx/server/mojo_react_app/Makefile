@@ -1,8 +1,8 @@
-DOCKER_TAG ?= my_app:development
+DOCKER_TAG ?= mojo_react_app:development
 NO_CACHE ?= false
 PULL ?= false
 BUILD_TYPE ?= development
-CONTAINER_NAME ?= my_app
+CONTAINER_NAME ?= mojo_react_app
 HTTPS_OUT_PORT ?= 443
 HTTPS_IN_PORT ?= 443
 HTTP_OUT_PORT ?= 80
@@ -59,23 +59,25 @@ dev:
 
 stag:
 	$(eval override BUILD_TYPE=staging)
-	$(eval override DOCKER_TAG = ${CONTAINER_NAME}:${BUILD_TYPE})
-	$(eval override ADDRESS=$(shell dig +short <your staging URL e.g. my_app-staging.com>))
+	$(eval override DOCKER_TAG=${CONTAINER_NAME}:${BUILD_TYPE})
+	# This will return only the IP address associated with the domain name ans assign it to ADDRESS
+	$(eval override ADDRESS=$(shell dig +short <your staging URL e.g. mojo-react-app-staging.com>))
 
 	make build -e PULL=true NO_CACHE=true DOCKER_TAG=${DOCKER_TAG}
 	make clean_container -e BUILD_TYPE=${BUILD_TYPE}
-	make create -e ADDRESS=${ADDRESS} HTTPS_OUT_PORT=443 HTTPS_IN_PORT=443 BUILD_TYPE=${BUILD_TYPE} DOCKER_TAG=${DOCKER_TAG}
+	make create -e ADDRESS=${ADDRESS} BUILD_TYPE=${BUILD_TYPE} DOCKER_TAG=${DOCKER_TAG}
 	make start -e BUILD_TYPE=${BUILD_TYPE}
 	make show
 
 prod:
 	$(eval override BUILD_TYPE=production)
 	$(eval override DOCKER_TAG = ${CONTAINER_NAME}:${BUILD_TYPE})
-	$(eval override ADDRESS=$(shell dig +short <your production URL e.g. my_app.com))
+	# This will return only the IP address associated with the domain name ans assign it to ADDRESS
+	$(eval override ADDRESS=$(shell dig +short <your production URL e.g. mojo-react-app.com))
 
 	make build -e PULL=true NO_CACHE=true DOCKER_TAG=${DOCKER_TAG}
 	make clean_container -e BUILD_TYPE=${BUILD_TYPE}
-	make create -e ADDRESS=${ADDRESS} HTTPS_OUT_PORT=443 HTTPS_IN_PORT=443 BUILD_TYPE=${BUILD_TYPE} DOCKER_TAG=${DOCKER_TAG}
+	make create -e ADDRESS=${ADDRESS} BUILD_TYPE=${BUILD_TYPE} DOCKER_TAG=${DOCKER_TAG}
 	make start -e BUILD_TYPE=${BUILD_TYPE}
 	make show
 
