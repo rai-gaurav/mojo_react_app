@@ -1,7 +1,7 @@
-Requirment
+To run
 1. One way -
     * Install Docker
-    * Run - `make dev` for development environemnt. It will take care of all the dependencies and you can access your server on https://localhost/
+    * Run - `make dev` for development environment. It will take care of all the dependencies and you can access your server on https://localhost/. RUn `make help` for more options
 
 2. In case you don't want to use docker and just run locally
     * Install some of the dependencies as present in Dockerfile namely - Mojolicious, Mojolicious::Plugin::OpenAPI, Mojolicious::Plugin::SwaggerUI
