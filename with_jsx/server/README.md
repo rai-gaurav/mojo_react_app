@@ -10,4 +10,4 @@ To run
     * In case you want diiferent port, run - `morbo -l http://*:3001 script/mojo_react_app`
     * It will work on Windows as well as Linux
 
-You can look at the [scrrenshots](https://github.com/rai-gaurav/mojo_react_app/tree/main/with_jsx/server/output_screenshot) fro more understanding.
+You can look at the [screenshots](https://github.com/rai-gaurav/mojo_react_app/tree/main/with_jsx/server/output_screenshot) for more understanding.
